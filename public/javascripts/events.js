@@ -13,16 +13,3 @@
 //     }
 //   }
 // })
-
-function createWebhook () {
-  $.post('/create_webhook', function () {
-    window.location.reload()
-  }).fail(function () {
-    console.log('Failed to create webhook.')
-  })
-}
-
-// Attach a handler to the login button that checks the authorization status and
-// either redirects to the events page, or pops up a login window.
-var createWebhookButton = document.getElementById('createWebhookButton')
-createWebhookButton.addEventListener('click', createWebhook, false)
